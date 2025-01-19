@@ -1,0 +1,39 @@
+.sidebar {
+  background-color: #020203;
+  width: 117px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.nav {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-icon {
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  color: white;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  position: absolute;
+  bottom: 100px;
+  width: 200px;
+  font-size: 12px;
+} 
