@@ -1,11 +1,15 @@
 import './App.css'
 import Sidebar from './components/layout/Sidebar'
+import Header from './components/layout/Header'
 
 function App() {
   return (
     <div className="app">
+      <Header />
       <Sidebar />
-      {/* Ici on ajoutera les autres composants de l'application */}
+      <main className="main-content">
+        {/* Ici viendra le contenu principal */}
+      </main>
     </div>
   )
 }

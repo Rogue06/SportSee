@@ -44,4 +44,11 @@
   min-height: 100vh;
 }
 
+.main-content {
+  margin-left: 117px;
+  margin-top: 91px;
+  padding: 2rem;
+  flex: 1;
+}
+
 /* On peut supprimer tous les styles par défaut de Vite */
