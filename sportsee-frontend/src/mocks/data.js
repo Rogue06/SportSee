@@ -51,10 +51,68 @@ export const USER_ACTIVITY = [
         kilogram: 81,
         calories: 280,
       },
-      // ... ajout des autres jours
+      {
+        day: "2020-07-04",
+        kilogram: 81,
+        calories: 290,
+      },
+      {
+        day: "2020-07-05",
+        kilogram: 80,
+        calories: 160,
+      },
+      {
+        day: "2020-07-06",
+        kilogram: 78,
+        calories: 162,
+      },
+      {
+        day: "2020-07-07",
+        kilogram: 76,
+        calories: 390,
+      },
     ],
   },
-  // ... données pour userId 18
+  {
+    userId: 18,
+    sessions: [
+      {
+        day: "2020-07-01",
+        kilogram: 70,
+        calories: 240,
+      },
+      {
+        day: "2020-07-02",
+        kilogram: 69,
+        calories: 220,
+      },
+      {
+        day: "2020-07-03",
+        kilogram: 70,
+        calories: 280,
+      },
+      {
+        day: "2020-07-04",
+        kilogram: 70,
+        calories: 500,
+      },
+      {
+        day: "2020-07-05",
+        kilogram: 69,
+        calories: 160,
+      },
+      {
+        day: "2020-07-06",
+        kilogram: 69,
+        calories: 162,
+      },
+      {
+        day: "2020-07-07",
+        kilogram: 69,
+        calories: 390,
+      },
+    ],
+  },
 ];
 
 export const USER_AVERAGE_SESSIONS = [
@@ -65,7 +123,30 @@ export const USER_AVERAGE_SESSIONS = [
         day: 1,
         sessionLength: 30,
       },
-      // ... autres sessions
+      {
+        day: 2,
+        sessionLength: 23,
+      },
+      {
+        day: 3,
+        sessionLength: 45,
+      },
+      {
+        day: 4,
+        sessionLength: 50,
+      },
+      {
+        day: 5,
+        sessionLength: 0,
+      },
+      {
+        day: 6,
+        sessionLength: 45,
+      },
+      {
+        day: 7,
+        sessionLength: 60,
+      },
     ],
   },
 ];
@@ -73,20 +154,31 @@ export const USER_AVERAGE_SESSIONS = [
 export const USER_PERFORMANCE = [
   {
     userId: 12,
-    kind: {
-      1: "cardio",
-      2: "energy",
-      3: "endurance",
-      4: "strength",
-      5: "speed",
-      6: "intensity",
-    },
     data: [
       {
         value: 80,
         kind: 1,
       },
-      // ... autres données de performance
+      {
+        value: 120,
+        kind: 2,
+      },
+      {
+        value: 140,
+        kind: 3,
+      },
+      {
+        value: 50,
+        kind: 4,
+      },
+      {
+        value: 200,
+        kind: 5,
+      },
+      {
+        value: 90,
+        kind: 6,
+      },
     ],
   },
 ];

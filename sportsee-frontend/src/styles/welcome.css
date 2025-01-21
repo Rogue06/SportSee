@@ -1,0 +1,17 @@
+.welcome {
+  padding: 2rem 0;
+}
+
+.welcome h1 {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.welcome .highlight {
+  color: #FF0101;
+}
+
+.welcome p {
+  font-size: 18px;
+} 
