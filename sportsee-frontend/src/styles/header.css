@@ -4,7 +4,7 @@
   background-color: #020203;
   padding: 1rem 2rem;
   height: 91px;
-  width: 100vw;
+  width: 100%;
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -12,7 +12,8 @@
 }
 
 .header-logo {
-  margin-right: 150px;
+  width: 15%;
+  min-width: 150px;
 }
 
 .header-logo img {
@@ -21,17 +22,36 @@
 
 .header-nav {
   display: flex;
-  justify-content: space-between;
-  width: 80%;
-  max-width: 1000px;
+  justify-content: space-around;
+  width: 85%;
+  padding: 0 2rem;
 }
 
 .nav-link {
   color: white;
   text-decoration: none;
   font-size: 24px;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
   color: #FF0101;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .header-logo {
+    min-width: 120px;
+  }
+  
+  .header-nav {
+    padding: 0 1rem;
+  }
+  
+  .nav-link {
+    font-size: 20px;
+  }
 } 

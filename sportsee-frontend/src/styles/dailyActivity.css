@@ -1,0 +1,44 @@
+.daily-activity {
+  background: #FBFBFB;
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+.daily-activity h2 {
+  font-size: 15px;
+  margin-bottom: 2rem;
+}
+
+.custom-tooltip {
+  background-color: #E60000;
+  padding: 0.5rem;
+  color: white;
+}
+
+.custom-tooltip p {
+  margin: 0.5rem 0;
+  font-size: 12px;
+  text-align: center;
+}
+
+.custom-legend {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin-right: 2rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #74798C;
+  font-size: 14px;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+} 
