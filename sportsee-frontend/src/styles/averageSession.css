@@ -1,0 +1,31 @@
+.average-session {
+  background: #FF0000;
+  border-radius: 5px;
+  padding: 1rem;
+  position: relative;
+  width: 258px;
+  height: 263px;
+}
+
+.average-session h2 {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 0;
+  padding: 0 1rem;
+  position: absolute;
+  top: 1rem;
+  width: 70%;
+}
+
+.average-tooltip {
+  background: white;
+  padding: 0.5rem;
+}
+
+.average-tooltip p {
+  color: black;
+  font-size: 10px;
+  margin: 0;
+  text-align: center;
+} 

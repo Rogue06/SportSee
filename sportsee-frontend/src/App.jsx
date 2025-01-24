@@ -4,6 +4,7 @@ import Sidebar from './components/layout/Sidebar'
 import Header from './components/layout/Header'
 import Welcome from './components/dashboard/Welcome'
 import DailyActivity from './components/dashboard/DailyActivity'
+import AverageSession from './components/dashboard/AverageSession'
 import { getUserData } from './services/userService'
 
 function App() {
@@ -31,7 +32,13 @@ function App() {
       <Sidebar />
       <main className="main-content">
         <Welcome userData={userData.mainData} />
-        <DailyActivity data={userData.activity} />
+        <div className="charts-grid">
+          <DailyActivity data={userData.activity} />
+          <div className="charts-row">
+            <AverageSession data={userData.averageSessions} />
+            {/* Les autres graphiques viendront ici */}
+          </div>
+        </div>
       </main>
     </div>
   )
