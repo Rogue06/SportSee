@@ -9,14 +9,23 @@ export const useUserData = (userId) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        if (!userId || isNaN(userId)) {
+          throw new Error("ID utilisateur invalide");
+        }
         const data = await getUserData(userId);
+        if (!data) {
+          throw new Error("Utilisateur non trouvé");
+        }
         setUserData(data);
+        setError(null);
       } catch (err) {
-        setError("Erreur lors du chargement des données");
+        setError(err.message || "Erreur lors du chargement des données");
+        setUserData(null);
       } finally {
         setIsLoading(false);
       }
     };
+
     fetchData();
   }, [userId]);
 

@@ -1,4 +1,5 @@
 import { useUserData } from './hooks/useUserData'
+import { BrowserRouter, Routes, Route, Navigate, useParams } from 'react-router-dom'
 import './App.css'
 import Sidebar from './components/layout/Sidebar'
 import Header from './components/layout/Header'
@@ -9,8 +10,10 @@ import Performance from './components/charts/Performance'
 import Score from './components/charts/Score'
 import KeyData from './components/dashboard/KeyData'
 
-function App() {
-  const { userData, error, isLoading } = useUserData(12)
+// Composant Dashboard séparé pour la clarté
+function Dashboard() {
+  const { userId } = useParams() // Récupère l'ID depuis l'URL
+  const { userData, error, isLoading } = useUserData(parseInt(userId))
 
   if (error) return <div className="error">{error}</div>
   if (isLoading) return <div>Chargement...</div>
@@ -34,6 +37,22 @@ function App() {
         </div>
       </main>
     </div>
+  )
+}
+
+// Composant App principal avec les routes
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        {/* Redirection de la racine vers l'utilisateur 12 par défaut */}
+        <Route path="/" element={<Navigate to="/user/12" replace />} />
+        {/* Route pour chaque utilisateur */}
+        <Route path="/user/:userId" element={<Dashboard />} />
+        {/* Route pour gérer les URLs invalides */}
+        <Route path="*" element={<Navigate to="/user/12" replace />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

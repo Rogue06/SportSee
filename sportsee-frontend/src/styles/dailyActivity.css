@@ -1,15 +1,15 @@
 .daily-activity {
   background: #FBFBFB;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 5px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   position: relative;
-  height: 320px;
+  height: 300px;
 }
 
 .daily-activity h2 {
     font-size: 15px;
-    margin-bottom: 0; /* Réduire l'espace sous le titre */
+    margin-bottom: 0; 
     position: absolute;
     top: 24px;
     left: 30px;
@@ -33,6 +33,15 @@
   justify-content: flex-end;
   gap: 2rem;
   margin-right: 2rem;
+}
+
+.key-data {
+ width: 200px;
+}
+
+.key-data-item {
+  padding: 1rem;
+  height: 100px;
 }
 
 .legend-item {

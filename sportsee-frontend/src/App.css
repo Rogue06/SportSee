@@ -49,14 +49,15 @@
 .main-content {
   margin-left: 117px;
   margin-top: 91px;
-  padding: 2rem 3rem;
+  padding: 1.5rem;
   flex: 1;
+  min-height: 0;
 }
 
 .dashboard-container {
   display: flex;
-  gap: 31px;
-  margin-top: 77px;
+  gap: 20px;
+  margin-top: 40px;
 }
 
 .charts-grid {
@@ -64,14 +65,14 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 10px;
 }
 
 .daily-activity {
   background: #FBFBFB;
   border-radius: 5px;
-  padding: 24px 32px;
-  height: 320px;
+  padding: 1rem;
+  height: 280px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -130,17 +131,32 @@
 /* Media query pour assurer la compatibilité minimale */
 @media (min-width: 1024px) and (max-width: 1280px) {
   .main-content {
-    padding: 2rem;
+    padding: 1rem;
+  }
+
+  .dashboard-container {
+    gap: 15px;
   }
 
   .charts-row {
-    gap: 20px;
+    gap: 15px;
   }
 
   .average-session,
   .performance,
   .score {
-    max-width: 220px;
+    max-width: 200px;
+    height: 200px;
+  }
+
+  .key-data {
+    max-width: 200px;
+    height: 200px;
+  }
+
+  .key-data-item {
+    padding: 1rem;
+    height: 100px;
   }
 }
 
