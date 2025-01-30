@@ -34,7 +34,7 @@ function DailyActivity({ data }) {
         <BarChart 
           data={formattedData}
           barGap={8}
-          margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+          margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
         >
           <CartesianGrid 
             strokeDasharray="3 3" 
@@ -99,9 +99,17 @@ function DailyActivity({ data }) {
   )
 }
 
-// Ajout de la validation des props
+// Modification de la validation des props
 DailyActivity.propTypes = {
-    data: PropTypes.array.isRequired, // Validation que 'data' est un tableau requis
+  data: PropTypes.shape({
+    sessions: PropTypes.arrayOf(
+      PropTypes.shape({
+        day: PropTypes.string.isRequired,
+        kilogram: PropTypes.number.isRequired,
+        calories: PropTypes.number.isRequired
+      })
+    ).isRequired
+  }).isRequired
 }
 
 export default DailyActivity 

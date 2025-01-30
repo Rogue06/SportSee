@@ -20,12 +20,13 @@ function Score({ score }) {
       <ResponsiveContainer width="100%" height={263}>
         <PieChart>
           <Pie
-            data={data}
-            dataKey="value"
-            innerRadius={70}
-            outerRadius={80}
-            startAngle={90}
+            data={data} 
+            dataKey="value" 
+            innerRadius={80} 
+            outerRadius={90}
+            startAngle={90} 
             endAngle={450}
+            cornerRadius={10} // Ajout du rayon arrondi
           >
             <Cell fill="#FF0000" />
             <Cell fill="transparent" />
@@ -37,7 +38,7 @@ function Score({ score }) {
             dominantBaseline="middle"
             className="score-text"
           >
-            <tspan x="50%" dy="-10" className="score-value">{`${scorePercentage}%`}</tspan>
+            <tspan x="50%" dy="-10" className="score-value">{`${scorePercentage}%`}</tspan> 
             <tspan x="50%" dy="20" className="score-label">de votre</tspan>
             <tspan x="50%" dy="20" className="score-label">objectif</tspan>
           </text>

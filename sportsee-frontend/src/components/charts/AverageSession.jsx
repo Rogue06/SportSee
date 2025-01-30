@@ -33,7 +33,7 @@ AverageSession.propTypes = {
 
   // Composant personnalisé pour le tooltip
   const CustomTooltip = ({ active, payload }) => {
-    if (!active || !payload) return null
+    if (!active || !payload || !payload[0]) return null
     return (
       <div className="average-tooltip">
         <p>{`${payload[0].value} min`}</p>
@@ -42,12 +42,8 @@ AverageSession.propTypes = {
   }
   // Ajout de la validation des props pour CustomTooltip
 CustomTooltip.propTypes = {
-    active: PropTypes.bool.isRequired,
-    payload: PropTypes.arrayOf(
-      PropTypes.shape({
-        value: PropTypes.number.isRequired,
-      })
-    ),
+    active: PropTypes.bool,
+    payload: PropTypes.array
   };
 
   // Gestion de l'assombrissement au survol
@@ -64,7 +60,12 @@ CustomTooltip.propTypes = {
   }
   // Ajout de la validation des props pour CustomCursor
 CustomCursor.propTypes = {
-    points: PropTypes.array.isRequired,
+    points: PropTypes.arrayOf(
+      PropTypes.shape({
+        x: PropTypes.number,
+        y: PropTypes.number
+      })
+    )
   };
 
   return (
