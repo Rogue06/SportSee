@@ -1,0 +1,48 @@
+.key-data {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.key-data-item {
+  background: #FBFBFB;
+  padding: 2rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: 124px;
+}
+
+.key-data-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.key-data-icon img {
+  width: 25px;
+  height: auto;
+}
+
+.key-data-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.key-data-value {
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
+  color: #282D30;
+}
+
+.key-data-label {
+  color: #74798C;
+  font-size: 14px;
+  margin: 0;
+} 

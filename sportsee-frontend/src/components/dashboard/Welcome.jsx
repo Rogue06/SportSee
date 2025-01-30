@@ -1,27 +1,7 @@
-import { useState, useEffect } from 'react'
-import { getUserData } from '../../services/userService'
+import PropTypes from 'prop-types'
 import '../../styles/welcome.css'
 
-function Welcome() {
-  const [userData, setUserData] = useState(null)
-  const [error, setError] = useState(null)
-  
-  useEffect(() => {
-    const fetchUserData = async () => {
-      try {
-        // Pour l'instant on utilise l'ID 12 en dur, plus tard on le récupérera via les props ou le routing
-        const data = await getUserData(12)
-        // On accède maintenant à mainData qui contient les informations utilisateur
-        setUserData(data.mainData)
-      } catch (err) {
-        setError('Impossible de récupérer les données utilisateur')
-      }
-    }
-
-    fetchUserData()
-  }, [])
-
-  if (error) return <div className="error">{error}</div>
+function Welcome({ userData }) { // Reçoit les données via props
   if (!userData) return <div>Chargement...</div>
 
   return (
@@ -30,6 +10,14 @@ function Welcome() {
       <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
     </div>
   )
+}
+
+Welcome.propTypes = {
+  userData: PropTypes.shape({
+    userInfos: PropTypes.shape({
+      firstName: PropTypes.string.isRequired
+    }).isRequired
+  }).isRequired
 }
 
 export default Welcome 

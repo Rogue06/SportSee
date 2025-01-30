@@ -1,0 +1,43 @@
+.score {
+  background: #FBFBFB;
+  border-radius: 5px;
+  width: 258px;
+  height: 263px;
+  position: relative;
+}
+
+.score h2 {
+  position: absolute;
+  top: 24px;
+  left: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  z-index: 1;
+}
+
+/* Ajout du fond blanc pour le cercle */
+.score-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 180px;
+  background: white;
+  border-radius: 50%;
+}
+
+.score-text {
+  fill: #282D30;
+  font-size: 16px;
+}
+
+.score-value {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.score-label {
+  font-size: 16px;
+  fill: #74798C;
+} 
