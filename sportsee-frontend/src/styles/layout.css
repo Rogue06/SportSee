@@ -1,0 +1,26 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  overflow-x: hidden; /* Empêche le scroll horizontal */
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 117px; /* Largeur de la sidebar */
+  padding-top: 91px; /* Hauteur du header */
+  min-width: 0; /* Important pour éviter le débordement */
+  box-sizing: border-box;
+}
+
+@media (max-width: 1280px) {
+  .main-content {
+    margin-left: 88px;
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-content {
+    padding: 1rem;
+  }
+} 
