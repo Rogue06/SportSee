@@ -10,26 +10,22 @@ function KeyData({ data }) {
     {
       icon: caloriesIcon,
       value: `${data.calorieCount}kCal`,
-      label: 'Calories',
-      bgColor: 'rgba(255, 0, 0, 0.1)'
+      label: 'Calories'
     },
     {
       icon: proteinsIcon,
       value: `${data.proteinCount}g`,
-      label: 'Protéines',
-      bgColor: 'rgba(74, 184, 255, 0.1)'
+      label: 'Protéines'
     },
     {
       icon: carbsIcon,
       value: `${data.carbohydrateCount}g`,
-      label: 'Glucides',
-      bgColor: 'rgba(249, 206, 35, 0.1)'
+      label: 'Glucides'
     },
     {
       icon: fatIcon,
       value: `${data.lipidCount}g`,
-      label: 'Lipides',
-      bgColor: 'rgba(253, 81, 129, 0.1)'
+      label: 'Lipides'
     }
   ]
 
@@ -37,9 +33,7 @@ function KeyData({ data }) {
     <div className="key-data">
       {items.map((item, index) => (
         <div className="key-data-item" key={index}>
-          <div className="key-data-icon" style={{ backgroundColor: item.bgColor }}>
-            <img src={item.icon} alt={item.label} />
-          </div>
+          <img src={item.icon} alt={item.label} className="key-data-icon" />
           <div className="key-data-text">
             <p className="key-data-value">{item.value}</p>
             <p className="key-data-label">{item.label}</p>
