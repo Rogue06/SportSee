@@ -1,6 +1,6 @@
 import { useUserData } from './hooks/useUserData'
 import { BrowserRouter, Routes, Route, Navigate, useParams } from 'react-router-dom'
-import './App.css'
+import './styles/App.css'
 import Sidebar from './components/layout/Sidebar'
 import Header from './components/layout/Header'
 import Welcome from './components/dashboard/Welcome'
