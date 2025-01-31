@@ -27,6 +27,11 @@ function DailyActivity({ data }) {
     )
   }
 
+  CustomTooltip.propTypes = {
+    active: PropTypes.bool,
+    payload: PropTypes.array
+  }
+
   return (
     <div className="daily-activity">
       <h2>Activité quotidienne</h2>
