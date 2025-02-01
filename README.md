@@ -24,7 +24,8 @@ SportSee est une startup dédiée au coaching sportif. Ce projet est le **nouvea
 
 ````bash
 git clone https://github.com/Rogue06/SportSee.git
-cd sportsee-frontend
+cd sportsee-frontend 
+````
 
 📦 2. **Installer les dépendances**
 
