@@ -95,6 +95,17 @@ const USE_MOCKED_DATA = false;
 ## 📂 Structure du Projet
 
 ```bash
+SportSee-backend/
+    ├── .devcontainer/ # Conteneur Docker
+    ├── app/ # Backend
+    ├── node_modules/ # Node Modules
+├── .gitignore # Git Ignore
+├── .dockerignore # Docker Ignore
+
+
+```
+
+```bash
 sportsee-frontend/
 ├── src/
 │ ├── assets/ # Images et ressources
