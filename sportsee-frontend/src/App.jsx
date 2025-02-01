@@ -10,7 +10,7 @@ import Performance from './components/charts/Performance'
 import Score from './components/charts/Score'
 import KeyData from './components/dashboard/KeyData'
 
-// Composant Dashboard séparé pour la clarté
+// Composant principal du Dashboard séparé pour la clarté
 function Dashboard() {
   const { userId } = useParams() // Récupère l'ID depuis l'URL
   const { userData, error, isLoading } = useUserData(parseInt(userId))
@@ -40,7 +40,9 @@ function Dashboard() {
   )
 }
 
-// Composant App principal avec les routes
+/**
+ * Composant principal de l'application
+ */
 function App() {
   return (
     <BrowserRouter>

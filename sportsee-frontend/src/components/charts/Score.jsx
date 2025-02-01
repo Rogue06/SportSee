@@ -3,8 +3,8 @@ import { PieChart, Pie, ResponsiveContainer, Cell } from 'recharts'
 import '../../styles/score.css'
 
 /**
- * Composant affichant le score de l'utilisateur sous forme de PieChart
- * @param {Object} data - Score de l'utilisateur
+* Affiche le score de l'utilisateur sous forme de graphique circulaire
+ * @param {number} score - Score entre 0 et 1
  */
 function Score({ score }) {
   const scorePercentage = score * 100

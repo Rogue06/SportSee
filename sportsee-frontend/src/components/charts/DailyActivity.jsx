@@ -3,8 +3,8 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 import '../../styles/dailyActivity.css'
 
 /**
- * Composant affichant le graphique d'activité quotidienne
- * @param {Object} data - Données d'activité de l'utilisateur
+* Affiche le graphique d'activité quotidienne (poids et calories)
+ * @param {Object} data - Données d'activité avec {day: string, kilogram: number, calories: number}
  */
 function DailyActivity({ data }) {
   if (!data) return null

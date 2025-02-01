@@ -3,8 +3,8 @@ import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'rec
 import '../../styles/averageSession.css'
 
 /**
- * Composant affichant le graphique de durée moyenne des sessions
- * @param {Object} data - Données des sessions moyennes de l'utilisateur
+* Affiche le graphique linéaire de la durée moyenne des sessions d'entraînement
+ * @param {Object} data - Données des sessions avec {day: number, sessionLength: number}
  */
 function AverageSession({ data }) {
   if (!data) return null
@@ -19,17 +19,6 @@ function AverageSession({ data }) {
     day: daysOfWeek[index]
   }))
 
-  // Validation des props pour AverageSession
-AverageSession.propTypes = {
-    data: PropTypes.shape({
-      sessions: PropTypes.arrayOf(
-        PropTypes.shape({
-          day: PropTypes.number,
-          sessionLength: PropTypes.number
-        })
-      )
-    }).isRequired
-  };
 
   // Composant personnalisé pour le tooltip
   const CustomTooltip = ({ active, payload }) => {
@@ -44,7 +33,7 @@ AverageSession.propTypes = {
 CustomTooltip.propTypes = {
     active: PropTypes.bool,
     payload: PropTypes.array
-  };
+  }
 
   // Gestion de l'assombrissement au survol
   const CustomCursor = ({ points }) => {

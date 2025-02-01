@@ -9,9 +9,10 @@ const API_BASE_URL = "http://localhost:3000";
 const USE_MOCKED_DATA = false;
 
 /**
- * Récupère les données d'un utilisateur
+ * Récupère toutes les données d'un utilisateur (profil, activité, sessions, performance)
  * @param {number} userId - ID de l'utilisateur
- * @returns {Promise<Object>} Données de l'utilisateur
+ * @returns {Promise<Object>} Données formatées de l'utilisateur
+ * @throws {Error} Si une requête API échoue
  */
 export const getUserData = async (userId) => {
   if (USE_MOCKED_DATA) {

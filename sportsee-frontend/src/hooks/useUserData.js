@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 import { getUserData } from "../services/userService";
 
+/**
+ * Hook personnalisé pour gérer le chargement des données utilisateur
+ * @param {number} userId - ID de l'utilisateur
+ * @returns {Object} {userData, error, isLoading}
+ */
 export const useUserData = (userId) => {
   const [userData, setUserData] = useState(null);
   const [error, setError] = useState(null);

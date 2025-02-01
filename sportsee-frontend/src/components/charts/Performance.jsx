@@ -3,8 +3,8 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } fro
 import '../../styles/performance.css'
 
 /**
- * Composant affichant le graphique radar des performances
- * @param {Object} data - Données de performance de l'utilisateur
+ * Affiche le graphique radar des performances physiques
+ * @param {Object} data - Données de performance avec {kind: number, value: number}
  */
 function Performance({ data }) {
   if (!data) return null
