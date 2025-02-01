@@ -13,55 +13,41 @@ SportSee est une startup dédiée au coaching sportif. Ce projet est le nouveau 
 ## Installation et lancement de l'application
 
 1. Cloner le repository qui contient le frontend et le backend
-<pre>
 
 ```bash
 git clone https://github.com/Rogue06/SportSee.git
 cd sportsee-frontend
 ```
 
-</pre>
-
 2. Installer les dépendances
-<pre>
 
 ```bash
 npm install
 ```
 
-</pre>
 3. Lancer l'application en mode développement
-<pre>
+
 ```bash
 npm run dev
 ```
-</pre>
 
 ## Configuration du Backend
 
-<pre>
 ```bash
 cd SportSee-backend
 ```
-</pre>
 
 1. Installer les dépendances
-<pre>
 
 ```bash
 yarn install
 ```
 
-</pre>
-
 2. Lancer le serveur backend
-<pre>
 
 ```bash
 yarn dev
 ```
-
-</pre>
 
 Le backend sera accessible sur `http://localhost:3000`
 
@@ -72,11 +58,9 @@ Par défaut, l'application utilise des données mockées. Pour utiliser l'API :
 1. Ouvrir `src/services/userService.js`
 2. Modifier la constante `USE_MOCKED_DATA` :
 
-<pre>
 ```javascript
 const USE_MOCKED_DATA = false;
 ```
-</pre>
 
 ## Fonctionnalités
 
