@@ -4,6 +4,7 @@ import {
   USER_AVERAGE_SESSIONS,
   USER_PERFORMANCE,
 } from "../mocks/data.js";
+import UserData from "../models/UserData";
 
 const API_BASE_URL = "http://localhost:3000";
 const USE_MOCKED_DATA = false;
@@ -27,7 +28,7 @@ export const getUserData = async (userId) => {
   }
 
   try {
-    // Récupération de toutes les données via des appels API parallèles
+    // Garder les appels API multiples
     const [
       mainDataResponse,
       activityResponse,
@@ -59,9 +60,12 @@ export const getUserData = async (userId) => {
         performanceResponse.json(),
       ]);
 
-    // Retour des données formatées comme avec les mocks
+    // Utiliser UserData pour formater les données
+    const formattedData = new UserData(mainData.data);
+
+    // Retourner l'objet complet avec les données formatées
     return {
-      mainData: mainData.data,
+      mainData: formattedData,
       activity: activity.data,
       averageSessions: averageSessions.data,
       performance: performance.data,
