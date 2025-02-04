@@ -63,14 +63,19 @@ CustomCursor.propTypes = {
       <ResponsiveContainer width="100%" height={263}>
         <LineChart
           data={formattedData}
-          margin={{ top: 50, right: 10, bottom: 10, left: 10 }}
+          margin={{ top: 80, right: 12, bottom: 15, left: 12 }}
         >
           <XAxis 
             dataKey="day"
             axisLine={false}
             tickLine={false}
-            tick={{ fill: 'rgba(255, 255, 255, 0.6)', fontSize: 12 }}
-            padding={{ left: 10, right: 10 }}
+            tick={{ 
+              fill: 'rgba(255, 255, 255, 0.6)', 
+              fontSize: 12,
+              dy: 10
+            }}
+            padding={{ left: 5, right: 5 }}
+            tickMargin={10}
           />
           <YAxis 
             hide={true}

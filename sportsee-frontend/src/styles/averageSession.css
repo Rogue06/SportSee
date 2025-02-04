@@ -1,21 +1,33 @@
 .average-session {
   background: #FF0000;
   border-radius: 5px;
-  padding: 1rem;
   position: relative;
   width: 258px;
   height: 263px;
+  overflow: hidden; /* Pour s'assurer que rien ne déborde */
 }
 
 .average-session h2 {
   color: rgba(255, 255, 255, 0.6);
   font-size: 15px;
   font-weight: 500;
-  margin-bottom: 0;
-  padding: 0 1rem;
+  margin: 0;
+  padding: 15px 34px;
   position: absolute;
-  top: 1rem;
-  width: 70%;
+  width: 147px;
+  z-index: 1;
+}
+
+/* Modification du conteneur Recharts */
+.average-session .recharts-wrapper,
+.average-session .recharts-surface {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Style spécifique pour les ticks de l'axe X */
+.average-session .recharts-xAxis .recharts-cartesian-axis-tick-value {
+  transform: translateY(-5px); /* Ajuste la position verticale des jours */
 }
 
 .average-tooltip {
@@ -28,4 +40,4 @@
   font-size: 10px;
   margin: 0;
   text-align: center;
-} 
+}
