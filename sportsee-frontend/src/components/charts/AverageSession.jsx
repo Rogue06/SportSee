@@ -101,4 +101,15 @@ CustomCursor.propTypes = {
   )
 }
 
+AverageSession.propTypes = {
+  data: PropTypes.shape({
+    sessions: PropTypes.arrayOf(
+      PropTypes.shape({
+        day: PropTypes.number,
+        sessionLength: PropTypes.number
+      })
+    )
+  })
+}
+
 export default AverageSession 

@@ -57,11 +57,11 @@ Performance.propTypes = {
   data: PropTypes.shape({
     data: PropTypes.arrayOf(
       PropTypes.shape({
-        value: PropTypes.number.isRequired,
-        kind: PropTypes.number.isRequired
+        value: PropTypes.number,
+        kind: PropTypes.number
       })
-    ).isRequired
-  }).isRequired
+    )
+  })
 }
 
 export default Performance 

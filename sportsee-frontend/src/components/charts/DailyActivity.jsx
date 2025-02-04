@@ -106,12 +106,12 @@ DailyActivity.propTypes = {
   data: PropTypes.shape({
     sessions: PropTypes.arrayOf(
       PropTypes.shape({
-        day: PropTypes.string.isRequired,
-        kilogram: PropTypes.number.isRequired,
-        calories: PropTypes.number.isRequired
+        day: PropTypes.string,
+        kilogram: PropTypes.number,
+        calories: PropTypes.number
       })
-    ).isRequired
-  }).isRequired
+    )
+  })
 }
 
 export default DailyActivity 
