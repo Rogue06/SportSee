@@ -45,7 +45,7 @@ function Dashboard() {
  */
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <Routes>
         {/* Redirection de la racine vers l'utilisateur 12 par défaut */}
         <Route path="/" element={<Navigate to="/user/12" replace />} />

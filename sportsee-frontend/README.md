@@ -97,7 +97,7 @@ const USE_MOCKED_DATA = false;
 ```bash
 SportSee-backend/
     ├── .devcontainer/ # Conteneur Docker
-    ├── app/ # Backend
+    ├── app/ # Backenda
     ├── node_modules/ # Node Modules
 ├── .gitignore # Git Ignore
 ├── .dockerignore # Docker Ignore
