@@ -6,6 +6,55 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 0;
 } 
+
+/* Ajustement du texte dans le radar */
+.performance .recharts-polar-angle-axis-tick text {
+  font-size: 10px !important;
+  fill: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Ajustement du graphique radar */
+.performance .recharts-wrapper,
+.performance .recharts-surface {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.performance .recharts-wrapper {
+  transform: scale(0.95);
+  transform-origin: center;
+}
+
+/* Styles spécifiques pour le radar à 1024x780px */
+@media screen and (min-width: 1024px) and (max-width: 1024px) and (max-height: 780px) {
+  .performance {
+    width: 200px;
+    height: 200px;
+    position: relative;
+  }
+
+  .performance .recharts-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.1);
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .performance .recharts-surface {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .performance .recharts-polar-angle-axis-tick text {
+    font-size: 9px !important;
+  }
+
+  .performance .recharts-polar-angle-axis-tick {
+    transform: translateY(-1px);
+  }
+}
 

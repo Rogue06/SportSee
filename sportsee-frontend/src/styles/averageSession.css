@@ -41,3 +41,22 @@
   margin: 0;
   text-align: center;
 }
+
+/* Media query spécifique pour 1024x780px */
+@media screen and (min-width: 1024px) and (max-width: 1024px) and (max-height: 780px) {
+  .average-session {
+    width: 200px;
+    height: 200px;
+  }
+
+  .average-session .recharts-wrapper {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  /* Ajuster le titre pour la nouvelle taille */
+  .average-session h2 {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

@@ -7,12 +7,29 @@
 
 .key-data-item {
   background: #FBFBFB;
-  height: 124px;
+  height: 90px;
+  width: 200px;
   border-radius: 5px;
-  padding: 32px;
+  padding: 20px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 15px;
+}
+
+.key-data-item img {
+  width: 45px;
+  height: 45px;
+}
+
+.key-data-item-info h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.key-data-item-info p {
+  font-size: 12px;
+  color: #74798C;
 }
 
 .key-data-icon {
@@ -55,6 +72,29 @@
   }
 
   .key-data-label {
+    font-size: 12px;
+  }
+}
+
+/* Styles spécifiques pour les key-data à 1024x780px */
+@media screen and (min-width: 1024px) and (max-width: 1024px) and (max-height: 780px) {
+  .key-data-item {
+    height: 90px;
+    width: 200px;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .key-data-item img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .key-data-item-info h3 {
+    font-size: 16px;
+  }
+
+  .key-data-item-info p {
     font-size: 12px;
   }
 } 

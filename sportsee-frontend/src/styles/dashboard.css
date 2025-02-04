@@ -1,7 +1,7 @@
 /* Styles du dashboard */
 .dashboard-container {
-  padding: 4rem 6rem;
-  max-width: 1440px;
+  padding: 2rem 3rem;
+  max-width: 1024px;
   margin: 0 auto;
 }
 
@@ -11,7 +11,7 @@
 
 .dashboard-content {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 /* Container principal des graphiques */
@@ -19,26 +19,27 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .charts-row {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
+  justify-content: space-between;
 }
 
 /* Colonne de droite */
 .key-data {
   display: flex;
   flex-direction: column;
-  gap: 39px;
-  width: 258px;
+  gap: 20px;
+  width: 200px;
 }
 
 /* Media queries */
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   .dashboard-container {
-    padding: 2rem;
+    padding: 1rem;
   }
 
   .dashboard-content {
@@ -51,5 +52,53 @@
     width: 100%;
     justify-content: space-between;
     margin-top: 2rem;
+  }
+
+  .charts-row {
+    gap: 0.5rem;
+  }
+}
+
+/* Media query spécifique pour 1024x780px */
+@media screen and (min-width: 1024px) and (max-width: 1024px) and (max-height: 780px) {
+  .dashboard-container {
+    padding: 1.5rem;
+  }
+
+  .charts-container {
+    gap: 1rem;
+  }
+
+  .charts-row {
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  /* Uniformiser la taille des trois graphiques */
+  .average-session,
+  .performance,
+  .score {
+    width: 200px !important; /* Force la même largeur */
+    height: 200px !important; /* Force la même hauteur */
+    min-width: 200px !important; /* Empêche le redimensionnement */
+    min-height: 200px !important;
+  }
+
+  /* Ajuster les conteneurs ResponsiveContainer */
+  .average-session .recharts-wrapper,
+  .performance .recharts-wrapper,
+  .score .recharts-wrapper {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .key-data {
+    width: 200px;
+    gap: 20px;
+  }
+
+  .key-data-item {
+    height: 90px;
+    padding: 20px;
   }
 } 
