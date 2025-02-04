@@ -34,6 +34,9 @@
   gap: 2rem;
   margin-right: 2rem;
 }
+h2 {
+  margin: 0;
+}
 
 .key-data {
  width: 200px;
