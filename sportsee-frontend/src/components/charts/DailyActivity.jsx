@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types' 
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 import '../../styles/dailyActivity.css'
+import { formatDailyActivity } from '../../services/formatService'
 
 /**
 * Affiche le graphique d'activité quotidienne (poids et calories)
@@ -9,11 +10,7 @@ import '../../styles/dailyActivity.css'
 function DailyActivity({ data }) {
   if (!data) return null
 
-  // Formatage simple des données avec index de 1 à 10
-  const formattedData = data.sessions.map((session, index) => ({
-    ...session,
-    day: index + 1 // Utilisation directe de l'index comme jour
-  }))
+  const formattedData = formatDailyActivity(data)
 
   // Composant simple pour le tooltip
   const CustomTooltip = ({ active, payload }) => {

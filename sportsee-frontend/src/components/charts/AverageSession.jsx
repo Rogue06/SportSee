@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts'
 import '../../styles/averageSession.css'
+import { formatAverageSessions } from '../../services/formatService'
 
 /**
 * Affiche le graphique linéaire de la durée moyenne des sessions d'entraînement
@@ -9,16 +10,7 @@ import '../../styles/averageSession.css'
 function AverageSession({ data }) {
   if (!data) return null
 
-  // Conversion des numéros de jour en lettres
-  const daysOfWeek = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
-  
-  // Formatage des données pour le graphique
-  const formattedData = data.sessions.map((session, index) => ({
-    ...session,
-    // Conversion du jour numérique en lettre
-    day: daysOfWeek[index]
-  }))
-
+  const formattedData = formatAverageSessions(data)
 
   // Composant personnalisé pour le tooltip
   const CustomTooltip = ({ active, payload }) => {

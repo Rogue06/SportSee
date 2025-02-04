@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts'
 import '../../styles/performance.css'
+import { formatPerformance } from '../../services/formatService'
 
 /**
  * Affiche le graphique radar des performances physiques
@@ -9,22 +10,7 @@ import '../../styles/performance.css'
 function Performance({ data }) {
   if (!data) return null
 
-  // Traduction des kinds en français dans l'ordre de la maquette
-  const kindMapping = {
-    1: 'Intensité',
-    2: 'Vitesse',
-    3: 'Force',
-    4: 'Endurance',
-    5: 'Energie',
-    6: 'Cardio'
-  }
-
-  // Formatage des données pour le graphique
-  const formattedData = data.data
-    .map(item => ({
-      value: item.value,
-      kind: kindMapping[item.kind]
-    }))
+  const formattedData = formatPerformance(data)
 
   return (
     <div className="performance">
