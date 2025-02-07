@@ -1,14 +1,20 @@
 .layout {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
-  overflow-x: hidden; /* Empêche le scroll horizontal */
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 
 .main-content {
   flex: 1;
   margin-left: 117px; /* Largeur de la sidebar */
   padding-top: 91px; /* Hauteur du header */
-  min-width: 0; /* Important pour éviter le débordement */
+  overflow: hidden;
+  position: fixed;
+  width: calc(100% - 117px);
+  height: calc(100vh - 91px);
+  min-width: 0; 
   box-sizing: border-box;
 }
 
@@ -22,5 +28,33 @@
 @media (max-width: 1024px) {
   .main-content {
     padding: 1rem;
+  }
+}
+
+/* Media query pour 1024x780px */
+@media screen and (min-width: 1024px) and (max-width: 1024px) and (max-height: 780px) {
+  .layout {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .main-content {
+    margin-left: 117px;
+    padding-top: 91px;
+    height: calc(100vh - 91px);
+    overflow: hidden;
+  }
+
+  /* Optionnel : si vous voulez que le contenu soit toujours visible */
+  .dashboard-container {
+    height: 100%;
+    overflow: auto; /* Permet le scroll uniquement dans le container si nécessaire */
+    scrollbar-width: none; /* Pour Firefox */
+    -ms-overflow-style: none; /* Pour Internet Explorer et Edge */
+  }
+
+  /* Cache la scrollbar pour Chrome, Safari et Opera */
+  .dashboard-container::-webkit-scrollbar {
+    display: none;
   }
 } 
